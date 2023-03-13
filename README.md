@@ -1,1 +1,1 @@
-# animal-crossing
+# AnimalCrossing
