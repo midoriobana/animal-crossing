@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-<div class="row">
-  <div class="card col-3" [style.background-color]="villager['text-color']" 
-  *ngFor="let villager of villagers | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: villagers?.length }; let i=index">  
-  <img [src]="villager.image_uri" class="card-img-top" alt="...">
-=======
 <div class="row gap-5 gap-md-2 my-4 justify-content-center" *ngIf="villagers">
   <div class="col-12 col-xs-12 col-sm-5 col-md-2 col-lg-2 col-xxl-2">
     <input type="search" placeholder="filter by name" [(ngModel)]="nameFiltered" class="form-control">
@@ -35,7 +29,6 @@
   <div class="card py-2 col-12 col-xs-12 col-sm-5 col-md-3 col-lg-3 col-xxl-2" [style.background-color]="villager['text-color']"
     *ngFor="let villager of villagers | NameFilterPipe: nameFiltered | SpecieFilterPipe: specieFiltered | GenderFilterPipe: genderFiltered | HobbyFilterPipe: hobbyFiltered | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: villagers?.length }; let i=index">
     <img [src]="villager.image_uri" class="card-img-top" alt="villager">
->>>>>>> Stashed changes
     <div class="card-body">
       <span class="badge mb-2" style="background-color: #59d3ff;" *ngIf="villager.gender == 'Male'">
         <i class="fa-solid fa-mars me-2"></i>
@@ -48,21 +41,12 @@
       <h5 class="card-title">{{ villager.name['name-USen'] }}</h5>
       <p class="card-text">Birthday: {{ villager['birthday-string'] }}</p>
       <p class="card-text">Specie: {{ villager.species }}</p>
-<<<<<<< Updated upstream
-      <p class="card-text">Catch phrase: "{{ villager['catch-phrase'] }}"</p>
-      <p class="card-text">Hobby: {{ villager.hobby }}</p>
-    </div>
-  </div>
-  <pagination (pageChanged)="pageChanged($event)" [totalItems]="villagers?.length" [maxSize]="7" [(ngModel)]="page" previousText="&lsaquo;" nextText="&rsaquo;"
-    firstText="&laquo;" lastText="&raquo;">
-=======
       <p class="card-text">Catch phrase:<span class="fst-italic">"{{ villager['catch-phrase'] }}"</span></p>
       <p class="card-text">Hobby: {{ villager.hobby }}</p>
     </div>
   </div>
   <pagination (pageChanged)="pageChanged($event)" [boundaryLinks]="true" [totalItems]="villagers?.length" [maxSize]="7" [(ngModel)]="page"
     previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
->>>>>>> Stashed changes
   </pagination>
   <p class="text-muted" *ngIf="villagers?.length === 0">No villagers to show</p>
 </div>

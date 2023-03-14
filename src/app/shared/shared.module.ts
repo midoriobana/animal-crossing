@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
-=======
 import { GenderFilterPipe } from './pipes/gender-filter.pipe';
 import { SpecieFilterPipe } from './pipes/specie-filter.pipe';
->>>>>>> Stashed changes
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
@@ -13,12 +10,6 @@ import { HobbyFilterPipe } from './pipes/hobby-filter.pipe';
     CommonModule
   ],
   declarations: [
-<<<<<<< Updated upstream
-    NameFilterPipe
-  ],
-  exports: [
-    NameFilterPipe
-=======
     NameFilterPipe,
     SpecieFilterPipe,
     GenderFilterPipe,
@@ -29,7 +20,6 @@ import { HobbyFilterPipe } from './pipes/hobby-filter.pipe';
     SpecieFilterPipe,
     GenderFilterPipe,
     HobbyFilterPipe
->>>>>>> Stashed changes
   ]
 })
 export class SharedModule { }

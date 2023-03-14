@@ -7,10 +7,6 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 })
 export class CardVillagerComponent implements OnInit {
 
-<<<<<<< Updated upstream
-  nameFilter: any
-=======
->>>>>>> Stashed changes
   @Input() villagers: any
   species: any = []
   hobbies: any = []
