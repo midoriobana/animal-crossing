@@ -1,3 +1,4 @@
+import { SpecieFilterPipe } from './pipes/specie-filter.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
@@ -7,10 +8,12 @@ import { NameFilterPipe } from './pipes/name-filter.pipe';
     CommonModule
   ],
   declarations: [
-    NameFilterPipe
+    NameFilterPipe,
+    SpecieFilterPipe
   ],
   exports: [
-    NameFilterPipe
+    NameFilterPipe,
+    SpecieFilterPipe
   ]
 })
 export class SharedModule { }

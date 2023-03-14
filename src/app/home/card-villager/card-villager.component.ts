@@ -7,7 +7,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 })
 export class CardVillagerComponent implements OnInit {
 
-  nameFilter: any
+  @Input() nameFiltered: any
   @Input() villagers: any
   itemsPerPage: number = 12
   page: any
