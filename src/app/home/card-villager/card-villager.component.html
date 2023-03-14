@@ -1,7 +1,7 @@
-<div class="row">
-  <div class="card col-3" [style.background-color]="villager['text-color']" 
-  *ngFor="let villager of villagers | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: villagers?.length }; let i=index">  
-  <img [src]="villager.image_uri" class="card-img-top" alt="...">
+<div class="row gap-4 justify-content-center" *ngIf="villagers">
+  <div class="card col-12 col-xs-12 col-sm-5 col-md-3 col-lg-4 col-xxl-3" [style.background-color]="villager['text-color']"
+    *ngFor="let villager of villagers | NameFilterPipe: nameFiltered  | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: villagers?.length }; let i=index">
+    <img [src]="villager.image_uri" class="card-img-top" alt="villager">
     <div class="card-body">
       <span class="badge text-primary">
         <i class="fa-solid fa-mars" *ngIf="villager.gender == 'Male'"></i>
@@ -11,11 +11,11 @@
       <h5 class="card-title">{{ villager.name['name-USen'] }}</h5>
       <p class="card-text">Birthday: {{ villager['birthday-string'] }}</p>
       <p class="card-text">Specie: {{ villager.species }}</p>
-      <p class="card-text">Catch phrase: "{{ villager['catch-phrase'] }}"</p>
+      <p class="card-text"><span class="fst-italic">Catch phrase: "{{ villager['catch-phrase'] }}"</span></p>
       <p class="card-text">Hobby: {{ villager.hobby }}</p>
     </div>
   </div>
-  <pagination (pageChanged)="pageChanged($event)" [totalItems]="villagers?.length" [maxSize]="7" [(ngModel)]="page" previousText="&lsaquo;" nextText="&rsaquo;"
-    firstText="&laquo;" lastText="&raquo;">
+  <pagination (pageChanged)="pageChanged($event)" [totalItems]="villagers?.length" [maxSize]="7" [(ngModel)]="page"
+    previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
   </pagination>
 </div>

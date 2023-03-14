@@ -18,7 +18,7 @@ import { HomeComponent } from './home.component';
     FormsModule,
     HomeRoutingModule,
     PaginationModule,
-    NgxPaginationModule // Importe o módulo aqui
+    NgxPaginationModule
   ],
   declarations: [
     HomeComponent,
@@ -27,8 +27,7 @@ import { HomeComponent } from './home.component';
   exports:[
     CardVillagerComponent,
     PaginationModule,
-    FormsModule,
-    NameFilterPipe,
+    FormsModule
   ]
 })
 export class HomeModule { }
