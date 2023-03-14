@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'SpecieFilterPipe'
+  name: 'GenderFilterPipe'
 })
-export class SpecieFilterPipe implements PipeTransform {
+export class GenderFilterPipe implements PipeTransform {
   transform(items: any[], field: string): any[] {
     if (!items) {
       return []
@@ -13,7 +13,7 @@ export class SpecieFilterPipe implements PipeTransform {
     }
 
     return items.filter(it => {
-      return it.species.includes(field)
+      return it.gender.includes(field)
     })
   }
 }
