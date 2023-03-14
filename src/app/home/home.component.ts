@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+<<<<<<< Updated upstream
+=======
+
+  villagers: any
+>>>>>>> Stashed changes
   
   villagers: any
 
@@ -21,4 +26,8 @@ export class HomeComponent implements OnInit {
     this.villagers = await this.villagerService.getAllVillagers()
   }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
